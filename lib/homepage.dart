@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:overlay_support/overlay_support.dart';
 import 'package:project_a/detail.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'dart:convert';
-
-import 'package:flutter/material.dart';
-//import 'package:a/detail.dart';
 import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {

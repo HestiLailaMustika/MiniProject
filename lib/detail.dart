@@ -57,12 +57,5 @@ class Detail extends StatelessWidget {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
-    floatingActionButton:
-    FloatingActionButton(
-      child: Icon(Icons.close),
-      onPressed: () => Navigator.push,
-    );
-    floatingActionButtonLocation:
-    FloatingActionButtonLocation.centerFloat;
   }
 }
