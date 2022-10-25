@@ -5,6 +5,7 @@ import 'package:project_a/detail.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -61,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                     content: _posts[index]['context'],
                     publishedAt: _posts[index]['publishedAt'],
                     author: _posts[index]['author'],
-                    urlToImage: _posts[index][' urlToImage'],
+                    urlToImage: _posts[index]['urlToImage'],
                   ),
                 ),
               );
