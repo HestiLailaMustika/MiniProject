@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Detail extends StatelessWidget {
   final url;
@@ -18,6 +19,13 @@ class Detail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Uri _url = Uri.parse('$url');
+    Future<void> _launchUrl() async {
+      if (!await launchUrl(_url)) {
+        throw 'Could not launch $_url';
+      }
+    }
+
     return Scaffold(
       body: Column(
         children: <Widget>[
@@ -45,7 +53,11 @@ class Detail extends StatelessWidget {
                 Text('$content'),
                 Divider(),
                 Text('Author : $author'),
-                Text('$url'),
+                //Text('$url'),
+                ElevatedButton(
+                  onPressed: _launchUrl,
+                  child: Text('Lihat Berita Selengkapnya ...'),
+                ),
               ],
             ),
           )
@@ -55,7 +67,8 @@ class Detail extends StatelessWidget {
         child: Icon(Icons.close),
         onPressed: () => Navigator.pop(context),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.miniCenterDocked,
     );
   }
 }
