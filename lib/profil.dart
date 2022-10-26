@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class Profile extends StatelessWidget {
+  const Profile({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: DefaultTabController(
           length: 2,
           child: Scaffold(
             appBar: AppBar(
-              title: Text('contoh tabbar'),
+              //title: Text('contoh tabbar'),
               bottom: TabBar(
                 tabs: <Widget>[
                   Tab(

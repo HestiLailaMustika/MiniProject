@@ -50,7 +50,7 @@ class _LoginPageState extends State<LoginPage> {
     final space = SizedBox(height: 20);
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login Page"),
+        title: Text("Login"),
       ),
       body: Center(
         child: Container(
