@@ -29,7 +29,6 @@ class Detail extends StatelessWidget {
     }
 
     return Scaffold(
-        resizeToAvoidBottomInset: false,
         body: Column(
           children: <Widget>[
             urlToImage != null
@@ -56,7 +55,6 @@ class Detail extends StatelessWidget {
                   Text('$content'),
                   Divider(),
                   Text('Author : $author'),
-                  //Text('$url'),
                   ElevatedButton(
                     onPressed: _launchUrl,
                     child: Text('Lihat Berita Selengkapnya ...'),
@@ -66,8 +64,6 @@ class Detail extends StatelessWidget {
             )
           ],
         ),
-
-        // ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: Padding(
             padding: const EdgeInsets.all(8.0),
